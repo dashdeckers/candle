@@ -100,14 +100,14 @@ impl Default for ParamsAdamW {
     }
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 struct VarAdamW {
     var: Var,
     first_moment: Var,
     second_moment: Var,
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct AdamW {
     vars: Vec<VarAdamW>,
     step_t: usize,
